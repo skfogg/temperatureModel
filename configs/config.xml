@@ -1,0 +1,30 @@
+<config>
+
+<!-- Configuration of the database used for model IO -->
+<dbconfig active="true">
+   <name>temp_signal</name>
+   <!--<url>jdbc:odbc:temp_signal</url>-->
+   <url>jdbc:mysql://localhost:3306/temptoolfour</url>
+   <username>root</username>
+   <password>MSUFLL!!</password>
+   <driver>com.mysql.cj.jdbc.Driver</driver>
+</dbconfig>
+
+<model active="true">
+   <prefix>temp_signal</prefix>
+   <output>
+      <outputter-type>basic</outputter-type>
+      <use-local>false</use-local>
+      <unique-tables>false</unique-tables>
+      <output-dbconfig>temp_signal</output-dbconfig>
+   </output>
+</model>
+    
+<runconfig active="true" overwritelogs="true">
+   <name>1</name>
+   <solver-type>basic</solver-type>
+   <run-type>single</run-type>
+   <input-dbconfig>temp_signal</input-dbconfig>
+</runconfig>
+
+</config>
